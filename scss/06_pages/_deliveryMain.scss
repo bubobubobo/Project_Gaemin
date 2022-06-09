@@ -9,7 +9,7 @@
 
     &__list {
       @include autoMargin;
-      max-width: rem(1040px);
+      max-width: rem(1140px);
       height: 100%;
       // overflow: hidden;
       border-radius: rem(28px);
@@ -25,7 +25,7 @@
       text-align: center;
       font-size: rem(18px);
       font-weight: 700;
-      width: rem(150px);
+      width: rem(180px);
       height: rem(210px);
     }
 
