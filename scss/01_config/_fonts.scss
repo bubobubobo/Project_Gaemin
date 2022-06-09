@@ -1,0 +1,26 @@
+@mixin fontSetup(
+  $weight: normal,
+  $size: 1rem,
+  $color: $font-black,
+  $height: 1.2
+) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@font-face {
+  font-family: "BMHANNAPro";
+  src: url(/fonts/BMHANNAPro.woff) format("woff");
+}
+
+@font-face {
+  font-family: "BMEuljiro10yearslater";
+  src: url(/fonts/BMEULJIROTTF.woff) format("woff");
+}
+
+@font-face {
+  font-family: "BMHANNA_11yrs_ttf";
+  src: url(/fonts/BMHANNA_11yrs_ttf.ttf) format("woff");
+}

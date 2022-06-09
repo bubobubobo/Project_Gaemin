@@ -1,0 +1,132 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-asian150 {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-bunsik150 {
+  background-image: url(sprite.png);
+  background-position: -155px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-burger150 {
+  background-image: url(sprite.png);
+  background-position: 0px -155px;
+  width: 150px;
+  height: 150px;
+}
+.icon-cafe150 {
+  background-image: url(sprite.png);
+  background-position: -155px -155px;
+  width: 150px;
+  height: 150px;
+}
+.icon-chicken150 {
+  background-image: url(sprite.png);
+  background-position: -310px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-dairy150 {
+  background-image: url(sprite.png);
+  background-position: -310px -155px;
+  width: 150px;
+  height: 150px;
+}
+.icon-instant150 {
+  background-image: url(sprite.png);
+  background-position: 0px -310px;
+  width: 150px;
+  height: 150px;
+}
+.icon-jajangmyeon150 {
+  background-image: url(sprite.png);
+  background-position: -155px -310px;
+  width: 150px;
+  height: 150px;
+}
+.icon-jjigae150 {
+  background-image: url(sprite.png);
+  background-position: -310px -310px;
+  width: 150px;
+  height: 150px;
+}
+.icon-jok150 {
+  background-image: url(sprite.png);
+  background-position: -465px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-lunchbox150 {
+  background-image: url(sprite.png);
+  background-position: -465px -155px;
+  width: 150px;
+  height: 150px;
+}
+.icon-pizza150 {
+  background-image: url(sprite.png);
+  background-position: -465px -310px;
+  width: 150px;
+  height: 150px;
+}
+.icon-rice150 {
+  background-image: url(sprite.png);
+  background-position: 0px -465px;
+  width: 150px;
+  height: 150px;
+}
+.icon-salad150 {
+  background-image: url(sprite.png);
+  background-position: -155px -465px;
+  width: 150px;
+  height: 150px;
+}
+.icon-sam150 {
+  background-image: url(sprite.png);
+  background-position: -310px -465px;
+  width: 150px;
+  height: 150px;
+}
+.icon-soup150 {
+  background-image: url(sprite.png);
+  background-position: -465px -465px;
+  width: 150px;
+  height: 150px;
+}
+.icon-spagetti150 {
+  background-image: url(sprite.png);
+  background-position: -620px 0px;
+  width: 150px;
+  height: 150px;
+}
+.icon-sushi150 {
+  background-image: url(sprite.png);
+  background-position: -620px -155px;
+  width: 150px;
+  height: 150px;
+}
+.icon-yasik150 {
+  background-image: url(sprite.png);
+  background-position: -620px -310px;
+  width: 150px;
+  height: 150px;
+}
