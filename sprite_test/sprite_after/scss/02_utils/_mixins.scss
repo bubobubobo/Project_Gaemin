@@ -1,0 +1,112 @@
+// Float 해제를 위한 clear 스타일 ---------------------------------------------------- /
+
+// Auto Margin을 활용한 박스 가운데 정렬 ------------------------------------------------ /
+@mixin autoMargin($marginX: auto) {
+  margin-left: $marginX;
+  margin-right: $marginX;
+}
+
+// 요소 박스의 가로 크기를 뷰포트 기준 100vw로 설정 -------------------------------------------- /
+
+// 요소 박스의 크기 고정 ----------------------------------------------------------- /
+
+// 폰트 스타일
+@mixin fontStyle($weight: normal, $size: 16px, $lh: normal) {
+  font-weight: $weight;
+  font-size: rem($size);
+  line-height: $lh;
+}
+
+// 데스크탑용 box sizing mixin
+@mixin boxSizeMinMax($min: 768px, $max: 1024px) {
+  min-width: $min;
+  max-width: $max;
+  @include autoMargin;
+}
+
+// Margin - margin-left, margin-right
+@mixin marginX($marginX: 0) {
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
+}
+
+@mixin marginY($marginY: 0) {
+  margin-top: rem($marginY);
+  margin-bottom: rem($marginY);
+}
+
+// padding mixin
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
+}
+
+// 버튼 기본 스타일 제거
+@mixin buttonNone {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+// position 중간
+@mixin centerAlignY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin boxSize($max-width: 1024px, $w: 100%, $h: 220px) {
+  width: $w;
+  max-width: $max-width;
+  height: $h;
+}
+
+// carousel wrapper 설정
+@mixin carouselWrapper {
+  @include autoMargin;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+// carouselList width 설정
+@mixin carouselListWidth(
+  $numOfItem: 10,
+  $percent: -100%,
+  $eachItemPercent: 100%
+) {
+  width: calc($eachItemPercent * ($numOfItem + 2));
+  transform: translate3D(
+    calc(var(--currentItem) * (1 / ($numOfItem + 2) * $percent)),
+    0,
+    0
+  );
+}
+
+// 슬라이딩 비율 설정
+@mixin carouselSlideItem($slidePercent: -100%) {
+  // transition: transform $duration ease-out;
+  transform: translate3d($slidePercent, 0, 0);
+}
+
+// text-overflow
+@mixin textOverflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin cartContainer($height, $align, $mg-top) {
+  @include autoMargin;
+  height: $height;
+  text-align: $align;
+  margin-top: $mg-top;
+  background-color: $white;
+  border-radius: 5px;
+}
