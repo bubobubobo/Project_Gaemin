@@ -1,0 +1,139 @@
+// 배달 포장 카드
+.main__card {
+  @include flexbox;
+  @include autoMargin;
+  @include boxSize($h: 17rem);
+  margin-top: 1rem;
+
+  &__item {
+    @include boxSize($max-width: 512px);
+    border-radius: 1rem;
+    border: 1px solid $grayscaleGray5;
+    margin: 0.25rem;
+    padding: 2rem;
+
+    background: $grayscaleSnow;
+
+    &__title {
+      font-family: "BMHANNAPro";
+      font-style: italic;
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    &__desc {
+      font-family: "BMHANNA_11yrs_ttf";
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.delivery {
+  background: $grayscaleSnow url("/images/main/foods406-transparent.png")
+    no-repeat 0 0;
+  background-position: right;
+}
+
+.package {
+  background: $grayscaleSnow url("/images/main/dilivery360.png") no-repeat 0 0;
+  background-position: right;
+}
+
+.main__banner__event,
+.main__card,
+.main__today__discount,
+.main__recent__order,
+.main__shopping__live {
+  @include autoMargin;
+  @include boxSize($h: auto);
+  margin-top: 3rem;
+  position: relative;
+}
+
+.main__section__heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.main__section__link {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background: $white url("/images/components/banner/black-arrow60.png")
+      no-repeat 0 0;
+    background-size: cover;
+    // background-position: ;
+    width: 0.85rem;
+    height: 0.85rem;
+    margin-left: 0.25rem;
+  }
+}
+
+.main__recent__order {
+  &__title {
+    &::after {
+      content: "";
+      display: inline-block;
+      background: $white url("/images/main/icon_thumbsUp.png") no-repeat 0 50%;
+      background-size: cover;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 340px;
+    background-image: linear-gradient(to left, #fff, transparent);
+  }
+
+  // 카드리스트
+  .main__restCards {
+    @include flexbox;
+    overflow-x: scroll;
+    gap: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .restCard {
+      flex-shrink: 0;
+      width: 280px;
+    }
+  }
+}
+
+.card {
+  &__darkgreen {
+    background: $carousel-darkgreen;
+  }
+
+  &__orange {
+    background: $carousel-orange;
+  }
+
+  &__pink {
+    background: $carousel-pink;
+  }
+
+  &__green {
+    background: $carousel-green;
+  }
+  &__olive {
+    background: $carousel-olive;
+  }
+}
