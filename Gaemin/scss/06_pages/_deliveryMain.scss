@@ -1,0 +1,168 @@
+$images: (
+  "sushi": "sushi200.png",
+  "chinese": "jajangmyeon200.png",
+  "chicken": "chicken200.png",
+  "rice": "rice168.png",
+  "cafe": "cafe150.png",
+  "bunsik": "bunsik200.png",
+  "jjigae": "jjigae150.png",
+  "pizza": "pizza150.png",
+  "spagetti": "spagetti126.png",
+  "sam": "sam168.png",
+  "jok": "jok150.png",
+  "asian": "asian168.png",
+  "burger": "burger200.png",
+  "yasik": "yasik150.png",
+  "lunchbox": "lunchbox200.png",
+  "salad": "salad200.png",
+  "soup": "soup200.png",
+  "dairy": "dairy200.png",
+);
+.deliveryMain-container {
+  .nav__main {
+    border-bottom: 2px solid $bg-gray;
+  }
+  .dm {
+    &__category {
+      background: $white;
+      padding-bottom: 35px;
+      max-width: 1324px;
+      margin: 0 auto;
+    }
+    &__food {
+      background: $white;
+      padding-top: 0;
+      max-width: 1324px;
+      margin: 0 auto;
+      .dm__food__nav__section__item {
+        select {
+          background: $white;
+        }
+      }
+      &__nav__section__list {
+        @include paddingY(15px);
+      }
+    }
+  }
+}
+.dm {
+  &__wrapper {
+    @include paddingY(20px);
+  }
+
+  // category section
+  &__category {
+    width: 100%;
+
+    &__list {
+      @include autoMargin;
+      max-width: rem(1140px);
+      height: 100%;
+      overflow: hidden;
+      border-radius: rem(28px);
+      @include flexbox($wrap: wrap);
+    }
+
+    &__item {
+      position: relative;
+      padding-top: rem(180px);
+      text-align: center;
+      font-size: rem(18px);
+      font-weight: 700;
+      width: rem(190px);
+      height: rem(210px);
+    }
+
+    &__link {
+      @each $name, $glyph in $images {
+        &__#{$name}::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: url("./../images/delivery-main/#{$glyph}") no-repeat;
+          background-size: 55%;
+          background-position: 50%;
+        }
+      }
+    }
+  }
+
+  // food section
+  &__food {
+    width: 100%;
+    padding: rem(60px);
+
+    &__nav {
+      @include autoMargin;
+      max-width: rem(1024px);
+      &__section {
+        &__list {
+          @include flexbox($justify: space-evenly);
+          overflow-x: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          a,
+          select {
+            @include paddingX(12px);
+            @include paddingY(24px);
+            display: block;
+            white-space: nowrap;
+            outline-offset: -12px -8px;
+          }
+
+          select {
+            border: none;
+            background: $bg-gray;
+          }
+        }
+
+        &__item {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: rem(1024px);
+      justify-content: space-evenly;
+      @include autoMargin;
+      overflow: hidden;
+      border-radius: rem(28px);
+    }
+
+    &__item {
+      margin-bottom: rem(30px);
+      display: block;
+      width: 45%;
+
+      .descContainer {
+        padding: rem(24px);
+      }
+    }
+
+    .couponWrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border-radius: rem(24px);
+      background: $bg-orange;
+      color: $font-orange;
+      @include paddingY(6px);
+      @include paddingX(10px);
+    }
+  }
+}
+.nav__ul {
+  overflow-x: hidden;
+}

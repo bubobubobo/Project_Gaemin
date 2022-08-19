@@ -1,0 +1,114 @@
+.restaurantCard__container {
+  width: 600px;
+}
+
+.restCard {
+  width: 100%;
+  position: relative;
+  background: $white;
+  border-radius: rem(28px);
+  box-shadow: rem(8px) rem(8px) rem(8px) $bg-gray;
+
+  .imgContainer {
+    width: 100%;
+    border-radius: rem(28px);
+    overflow: hidden;
+
+    img {
+      border-radius: rem(28px);
+      width: 100%;
+    }
+  }
+
+  .descContainer {
+    width: 100%;
+    @include paddingX(12px);
+    @include paddingY(14px);
+    font-size: rem(20px);
+
+    .restName {
+      float: left;
+      padding-right: rem(4px);
+      font-size: rem(24px);
+      font-weight: 700;
+
+      .restLink::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .descWrapper {
+      display: inline-block;
+      line-height: 2;
+      margin-right: 1rem;
+
+      &__rating {
+        line-height: 1.4;
+        img {
+          width: rem(24px);
+          padding-bottom: rem(4px);
+        }
+      }
+    }
+
+    dt {
+      color: $font-gray;
+    }
+
+    dt,
+    dd {
+      display: inline-block;
+    }
+
+    .rating {
+      font-weight: 700;
+    }
+
+    .rating-dt {
+      img {
+        display: inline-block;
+        width: rem(25px);
+        padding-bottom: rem(5px);
+        background-size: contain;
+      }
+    }
+
+    .middot {
+      color: $font-gray;
+    }
+
+    .bmNo1wrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border: 1px solid $banner-blue;
+      border-radius: rem(24px);
+      background: $bg-blue;
+      @include paddingY(6px);
+      @include paddingX(10px);
+
+      dt {
+        font-weight: 700;
+        color: $font-blue;
+      }
+
+      .no1 {
+        display: inline-block;
+        width: rem(20px);
+        height: rem(22px);
+        background: url("./../images/components/restaurantCard/no1-24.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-indent: 99rem;
+        white-space: nowrap;
+        transform: translateY(10%);
+        overflow: hidden;
+      }
+    }
+  }
+}
