@@ -1,0 +1,113 @@
+.dm {
+  &__wrapper {
+    @include paddingY(20px);
+  }
+
+  // category section
+  &__category {
+    width: 100%;
+
+    &__list {
+      @include autoMargin;
+      max-width: rem(1140px);
+      height: 100%;
+      // overflow: hidden;
+      border-radius: rem(28px);
+      @include flexbox($wrap: wrap);
+      justify-content: space-evenly;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      font-size: rem(18px);
+      font-weight: 700;
+      width: rem(180px);
+      height: rem(210px);
+    }
+
+    &__icon {
+      width: rem(100px);
+      height: rem(100px);
+      @include autoMargin;
+    }
+  }
+
+  // food section
+  &__food {
+    width: 100%;
+    padding: rem(60px);
+
+    &__nav {
+      @include autoMargin;
+      max-width: rem(1024px);
+      &__section {
+        
+        &__list {
+          @include flexbox($justify: space-evenly);
+          overflow-x: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+
+          a, select {
+            @include paddingX(12px);
+            @include paddingY(24px);
+            display: block;
+            white-space: nowrap;
+            outline-offset: -12px -8px;
+          }
+
+          select {
+            border: none;
+            background: $bg-gray;
+          }
+        }
+
+        &__item {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+    }
+
+    &__list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: rem(1024px);
+      justify-content: space-evenly;
+      @include autoMargin;
+      overflow: hidden;
+      border-radius: rem(28px);
+    }
+
+    &__item {
+      margin-bottom: rem(30px);
+      display: block;
+      width: 45%;
+
+      .descContainer {
+        padding: rem(24px);
+      }
+    }
+
+    .couponWrapper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0.5rem;
+      border-radius: rem(24px);
+      background: $bg-orange;
+      color: $font-orange;
+      @include paddingY(6px);
+      @include paddingX(10px);
+    }
+  }
+}
