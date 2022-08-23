@@ -16,7 +16,7 @@ url : https://bubobubobo.github.io/Gaemin/main.html
 
 # Branch Strategy & Commit Convention
 
-  * 5인 구성의 단기간 소규모 프로젝트임을 고려해 <span style="color:red">Github Flow 사용</span>
+  * 5인 구성의 단기간 소규모 프로젝트임을 고려해 <span style="color:ed">Github Flow 사용</span>
 
   * commit convention은 아래와 같이 "제목 - 설명 - 꼬리말" 구성으로 작성
 
