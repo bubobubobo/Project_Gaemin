@@ -18,7 +18,7 @@ url : https://bubobubobo.github.io/Gaemin/main.html
 
 5인 구성의 단기간 소규모 프로젝트임을 고려해 **Github Flow 사용**
 
-commit convention은 아래와 같이 작성
+commit convention은 아래와 같이 "제목 - 설명 - 꼬리말" 구성으로 작성
 ```
 타입[스코프]: 제목 (TYPE[SCOPE]: SUBJECT)
 
